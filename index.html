@@ -17,59 +17,38 @@
       
       <div class="full-img" id="fullImgBox">
            
-            
-
-            <!-- <div class="row">
-                  <div class="col-2">
-                         <h2 class="title">My Projects</h2>
-                         <h2 class="title">My Projects</h2>
-                         <h2 class="title">My Projects</h2>
-                  </div>     
-
-                  <div class="col-2">
-                <div class="carousel owl-carousel">
-                    <div class="card">
-                        <div class="box">
-                            <img src="img/img1.jpg" id="fullImg" alt="">
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="img/img1.jpg" id="fullImg" alt="">
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="img/img1.jpg" id="fullImg" alt="">
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="img/img1.jpg" id="fullImg" alt="">
-                            
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="img/img1.jpg" id="fullImg" alt="">
-                            
-                        </div>
-                    </div>
-                   </div>
+             <!-- <div class="container">
+               <div class="left-content"></div>
+                  <div class="card">
+                    <div class="box">
+                      <img src="img/img1.jpg" alt="">
+                      </div> 
+                  </div>
+                  <div class="card">
+                    <div class="box">
+                      <img src="img/img1.jpg" alt="">
+                      </div> 
+                  </div>
                 </div>
-            </div>  -->
-        <!-- </section> -->
+                <div class="right-content"></div>
+                  <div class="card">
+                    <div class="box">
+                      <h1>test</h1>
+                      </div> 
+                  </div>
+                  <div class="card">
+                    <div class="box">
+                      <img src="img/img1.jpg" alt="">
+                      </div> 
+                  </div>
+                </div>
+             </div> -->
+
+      
     
       </div>
 
-      <div class="btn-container">
-        <button class="filter-btn" type="button" data-id="all">All</button>
-        <button class="filter-btn" type="button" data-id="breakfast">breakfast</button>
-        <button class="filter-btn" type="button" data-id="lunch">lunch</button>
-        <button class="filter-btn" type="button" data-id="shake">Shake</button>
-      </div>
+   
 
 
       <div class="img-gallery">
@@ -142,7 +121,7 @@
          {
           id: 7,
           title: "item7",
-          img: "img/img7.jpg",
+          img: "img/img8.jpg",
           img2: "img/img8.jpg",
           desc: "img/img7.jpg",
           category: "lunch"
@@ -150,7 +129,7 @@
          {
           id: 8,
           title: "item8",
-          img: "img/img8.jpg",
+          img: "img/img5.jpg",
           img2: "img/img1.jpg",
           desc: "img/img8.jpg",
           category: "breakfast"
@@ -199,9 +178,11 @@
                 // filter
                 const category = e.currentTarget.dataset.id;
                 const imageTitle = menu.filter(function (menuItem) {
-       
+        
                 if (menuItem.title === category) {
-                 return menuItem;
+                  console.log(menuItem.id)
+              return menuItem;
+               
                 }
                 })
                 diplaySelectedImages(imageTitle)
@@ -221,7 +202,6 @@
        return `
             <span id="ex">X</span>
           <img src=${Selected.img} alt=${Selected.title} class="photo" /> 
-           <img src=${Selected.img2} alt=${Selected.title} class="photo" /> 
          `;
         });
          displayImg = displayImg.join("");

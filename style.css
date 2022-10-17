@@ -24,6 +24,11 @@ body{
       box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
 }
 
+
+.container {
+    display: flex;
+}
+
 .full-img {
       width: 100%;
       height: 100vh;
@@ -36,10 +41,12 @@ body{
       justify-content: center;
       z-index: 100;
 }
+
 .full-img img {
       width: 90%;
       max-width: 500px;
 } 
+
 .full-img span{
       position: absolute;
       top: 5%;
